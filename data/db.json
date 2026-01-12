@@ -1,0 +1,155 @@
+{
+  "users": [
+    {
+      "id": "user_0001",
+      "username": "organizer",
+      "password_salt_hex": "2b80ae1c90cdd7ce90490c6bfdaa2753",
+      "password_hash_hex": "48c9c71c2bd9232e4296b998e4e526d3c4289f165237049472041e268d448a7c",
+      "role": "organizer"
+    },
+    {
+      "id": "user_0002",
+      "username": "judge",
+      "password_salt_hex": "c51c7099379ff582cab5e38d02cea8a0",
+      "password_hash_hex": "8ebeabe620033b2262be868ba5fd189bd422f119c9c282fda7357b153c2081d5",
+      "role": "judge"
+    },
+    {
+      "id": "user_0003",
+      "username": "bitabita",
+      "password_salt_hex": "57d023e72665dca7befa64c9f9da4fa2",
+      "password_hash_hex": "e73c40c6997b0f80f23b3cad4b1a30eb7410bcafc9a111202e6be7911ef0b467",
+      "role": "participant",
+      "profile": {
+        "full_name": "Bita Aurelia",
+        "age": 19,
+        "phone": "083175259592"
+      }
+    },
+    {
+      "id": "user_0004",
+      "username": "reimama",
+      "password_salt_hex": "df98b6d11154fff54f2592332343e3a6",
+      "password_hash_hex": "e9128f966907dc459a05db7e662abaf0e526bde66687f92862c746fef3ac1376",
+      "role": "participant",
+      "profile": {
+        "full_name": "Reima Firdaus",
+        "age": 10,
+        "phone": "082377416389"
+      }
+    }
+  ],
+  "competition": {
+    "id": "comp_0001",
+    "name": "Lomba Nyanyi Nasional",
+    "location": "Jakarta",
+    "date": "2026-02-01",
+    "deadline": "2026-01-20",
+    "categories": {
+      "cat_anak": {
+        "id": "cat_anak",
+        "name": "Anak (7-12)",
+        "min_age": 7,
+        "max_age": 12,
+        "fee": 50000,
+        "quota": 50
+      },
+      "cat_remaja": {
+        "id": "cat_remaja",
+        "name": "Remaja (13-17)",
+        "min_age": 13,
+        "max_age": 17,
+        "fee": 75000,
+        "quota": 50
+      },
+      "cat_dewasa": {
+        "id": "cat_dewasa",
+        "name": "Dewasa (18-35)",
+        "min_age": 18,
+        "max_age": 35,
+        "fee": 100000,
+        "quota": 50
+      }
+    }
+  },
+  "registrations": [
+    {
+      "id": "reg_0001",
+      "participant_id": "user_0003",
+      "category_id": "cat_dewasa",
+      "song_title": "Matahariku",
+      "song_creator": "Agnes Mo",
+      "media_link": "https://youtu.be/1cEyDYKl3-0?si=nOzje81sxRq_MRlo",
+      "status": "scheduled",
+      "submitted_at": "2025-12-30T14:50:06.053543",
+      "payment": {
+        "method": "ewallet",
+        "amount": 100000,
+        "proof": "https://youtu.be/1cEyDYKl3-0?si=nOzje81sxRq_MRlo",
+        "paid_at": "2025-12-30T14:50:06.077466"
+      },
+      "verified_at": "2025-12-30T14:59:14.324771",
+      "rejected_reason": null,
+      "schedule_slot_id": "slot_0001"
+    },
+    {
+      "id": "reg_0002",
+      "participant_id": "user_0004",
+      "category_id": "cat_anak",
+      "song_title": "nirmala",
+      "song_creator": "Siti Nurhaliza",
+      "media_link": "https://youtu.be/ggYmxuI9hj0?si=4z0fM3Iel2CAU3XC",
+      "status": "scheduled",
+      "submitted_at": "2025-12-30T14:54:09.890873",
+      "payment": {
+        "method": "transfer_bank",
+        "amount": 50000,
+        "proof": "https://youtu.be/ggYmxuI9hj0?si=Xm8A907niKbGLl8U",
+        "paid_at": "2025-12-30T14:54:09.942144"
+      },
+      "verified_at": "2025-12-30T14:59:34.366212",
+      "rejected_reason": null,
+      "schedule_slot_id": "slot_0002"
+    }
+  ],
+  "schedule_slots": [
+    {
+      "id": "slot_0001",
+      "order_no": 1,
+      "date_time": "2026-04-04 09:00",
+      "stage": "Loka Space",
+      "registration_id": "reg_0001"
+    },
+    {
+      "id": "slot_0002",
+      "order_no": 2,
+      "date_time": "2026-04-04 09:00",
+      "stage": "Loka Space",
+      "registration_id": "reg_0002"
+    }
+  ],
+  "scores": [
+    {
+      "id": "score_0001",
+      "registration_id": "reg_0001",
+      "judge_id": "user_0002",
+      "vocal": 68,
+      "intonation": 17,
+      "stage": 7,
+      "created_at": "2025-12-30T15:08:50.085434"
+    },
+    {
+      "id": "score_0002",
+      "registration_id": "reg_0002",
+      "judge_id": "user_0002",
+      "vocal": 50,
+      "intonation": 10,
+      "stage": 5,
+      "created_at": "2025-12-30T15:10:36.393278"
+    }
+  ],
+  "__counter_user": 4,
+  "__counter_reg": 2,
+  "__counter_slot": 2,
+  "__counter_score": 2
+}
